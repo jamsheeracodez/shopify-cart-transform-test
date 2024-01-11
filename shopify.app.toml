@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "2CartTransform"
+client_id = "21b0b87732f4b41cac3e610185863b34"
+application_url = "https://issues-incurred-movers-feel.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_cart_transforms,write_cart_transforms,write_products"
+
+[auth]
+redirect_urls = [
+  "https://issues-incurred-movers-feel.trycloudflare.com/auth/callback",
+  "https://issues-incurred-movers-feel.trycloudflare.com/auth/shopify/callback",
+  "https://issues-incurred-movers-feel.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "jamsheer-local.myshopify.com"

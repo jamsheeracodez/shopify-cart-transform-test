@@ -1,0 +1,29 @@
+{% schema %}
+{
+"name": "Addons - Product Options",
+"target": "head",
+"settings": []
+}
+{% endschema %}
+<script>
+  // JavaScript code to insert the input field
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create the input element
+    var inputElement = document.createElement('input');
+    inputElement.type = 'text';
+    inputElement.name = 'properties[Custom Field]';
+    inputElement.value = 'Test Value';
+    inputElement.style = 'width: 100%;\n' +
+      '    height: 49px;\n' +
+      '    margin: 10px 0;\n' +
+      '    border: 1px solid #f00;';
+
+    // Find the target div with class "product-form__buttons"
+    var formTags = document.querySelectorAll('form[action="/cart/add"]');
+    formTags.forEach(formTag=>{
+      formTag.prepend(inputElement);
+    })
+    // Append the input element to the form
+
+  });
+</script>
